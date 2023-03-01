@@ -8,16 +8,16 @@ module.exports = {
     'plugin:vue/vue3-essential',
     'standard-with-typescript',
     'plugin:prettier/recommended',
-    './src/presets/eslint/eslintrc-auto-import.json'
+    // './src/presets/eslint/eslintrc-auto-import.json'
   ],
-  // overrides: [
-  //   {
-  //     files: ['*.ts', '*.tsx'],
-  //     parserOptions: {
-  //       project: ['./tsconfig.json']
-  //     }
-  //   }
-  // ],
+  overrides: [
+    {
+      files: ['*.ts', '*.tsx'],
+      parserOptions: {
+        project: ['./tsconfig.json']
+      }
+    }
+  ],
   // parserOptions: {
   //   ecmaVersion: 'latest',
   //   parser: '@typescript-eslint/parser',

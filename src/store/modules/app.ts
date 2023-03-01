@@ -25,7 +25,7 @@ export const useAppStore = defineStore('app', {
   }),
   getters: {
     /** 侧边栏宽度 */
-    siderWidth (state) {
+    siderWidth(state) {
       const { siderCollapse, isDrawer } = state
       if (isDrawer) return '0px'
       if (siderCollapse) {
@@ -39,7 +39,7 @@ export const useAppStore = defineStore('app', {
     /**
      * 重载页面
      */
-    async reloadPage () {
+    async reloadPage() {
       const menuStore = useMenuStore()
       const name: string = this.$router.currentRoute.value.name as string
       menuStore.resetCache(name)
@@ -52,31 +52,31 @@ export const useAppStore = defineStore('app', {
       }, 100)
     },
     /** 打开设置抽屉 */
-    openSettingDrawer () {
+    openSettingDrawer() {
       this.settingDrawerVisible = true
     },
     /** 关闭设置抽屉 */
-    closeSettingDrawer () {
+    closeSettingDrawer() {
       this.settingDrawerVisible = false
     },
     /** 切换抽屉可见状态 */
-    toggleSettingDrawerVisible () {
+    toggleSettingDrawerVisible() {
       this.settingDrawerVisible = !this.settingDrawerVisible
     },
     /** 设置侧边栏折叠状态 */
-    setSiderCollapse (collapse: boolean) {
+    setSiderCollapse(collapse: boolean) {
       this.siderCollapse = collapse
     },
     /** 折叠/展开 侧边栏折叠状态 */
-    toggleSiderCollapse () {
+    toggleSiderCollapse() {
       this.siderCollapse = !this.siderCollapse
     },
     /** 设置 vertical-mix模式下 侧边栏的固定状态 */
-    setMixSiderIsFixed (isFixed: boolean) {
+    setMixSiderIsFixed(isFixed: boolean) {
       this.mixSiderFixed = isFixed
     },
     /** 设置 vertical-mix模式下 侧边栏的固定状态 */
-    toggleMixSiderFixed () {
+    toggleMixSiderFixed() {
       this.mixSiderFixed = !this.mixSiderFixed
     }
   }

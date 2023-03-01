@@ -53,8 +53,7 @@ export default defineConfig({
     Components({
       // 组件输出路径
       dts: './src/presets/types/components.d.ts',
-      resolvers: [ElementPlusResolver()
-      ],
+      resolvers: [ElementPlusResolver()],
       // , IconsResolver({ prefix: false, enabledCollections: ['ep', 'mdi', 'fa'] })
       exclude: [/[\\/]node_modules[\\/]/, /[\\/]\.git[\\/]/]
     })

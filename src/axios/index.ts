@@ -2,7 +2,7 @@ import axios from 'axios'
 import { type CustomRequestConfig, type CustomResponse } from './types'
 // import { getLocalStorage } from '@/utils/storage'
 // import { useUserStore, useTagsStore } from '@/stores'
-import router from '@/routers/index'
+// import router from '@/routers/index'
 // import moment from 'moment'
 
 /**
@@ -27,32 +27,32 @@ import router from '@/routers/index'
  */
 const errorHandle = (status: number, other: any) => {
   // 状态码判断
-//   switch (status) {
-//     case 500:
-//       tip('系统更新重启中........')
-//       break
-//     // 401：未登录状态，可跳转登录页
-//     case 401:
-//       tip('未登录！')
-//       break
-//     case 403:
-//       // 403：登录过期，可处理清空缓存
-//       tip('登录过期，请重新登录！')
-//       break
-//     case 404:
-//       tip('请求的资源不存在！')
-//       break
-//     case 415:
-//       tip('请求参数格式错误！')
-//       break
-//     case 302:
-//       tip('未登录或登录失效或账号存在重复使用，请重新登录！')
-//       useUserStore().LOGINOUT()
-//       router.push({ name: 'login' })
-//       break
-//     default:
-//       if (typeof other === 'string') tip(other)
-//   }
+  //   switch (status) {
+  //     case 500:
+  //       tip('系统更新重启中........')
+  //       break
+  //     // 401：未登录状态，可跳转登录页
+  //     case 401:
+  //       tip('未登录！')
+  //       break
+  //     case 403:
+  //       // 403：登录过期，可处理清空缓存
+  //       tip('登录过期，请重新登录！')
+  //       break
+  //     case 404:
+  //       tip('请求的资源不存在！')
+  //       break
+  //     case 415:
+  //       tip('请求参数格式错误！')
+  //       break
+  //     case 302:
+  //       tip('未登录或登录失效或账号存在重复使用，请重新登录！')
+  //       useUserStore().LOGINOUT()
+  //       router.push({ name: 'login' })
+  //       break
+  //     default:
+  //       if (typeof other === 'string') tip(other)
+  //   }
 }
 
 /**

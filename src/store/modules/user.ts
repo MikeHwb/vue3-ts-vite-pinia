@@ -19,7 +19,7 @@ export const useUserStore = defineStore({
   }),
   getters: {},
   actions: {
-    setUserInfo (data: any) {
+    setUserInfo(data: any) {
       const { token, username, nickname, avatar, menuList } = data
       this.token = token
       this.username = username
@@ -29,7 +29,7 @@ export const useUserStore = defineStore({
       const menuStore = useMenuStore()
       menuStore.setMenuList(menuList)
     },
-    logout () {
+    logout() {
       removeLocalStorage('token')
       const tabStore = useTabStore()
       const menuStore = useMenuStore()

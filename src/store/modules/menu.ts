@@ -24,32 +24,32 @@ export const useMenuStore = defineStore({
   getters: {},
   actions: {
     // 保存登录用户的菜单列表
-    setMenuList (menuList: IMenu[]) {
+    setMenuList(menuList: IMenu[]) {
       this.menuList = menuList
     },
 
     // 保存用户第一个权限菜单
-    setPermissionMenu (menuPath = '/') {
+    setPermissionMenu(menuPath = '/') {
       this.permissionMenu = menuPath
     },
 
     // 保存动态路由
-    setDynamicRouteList (dynamicRouteList: IRoute[]) {
+    setDynamicRouteList(dynamicRouteList: IRoute[]) {
       this.dynamicRouteList = dynamicRouteList
     },
 
     // 设置路由缓存
-    setCache (cacheList: string[]) {
+    setCache(cacheList: string[]) {
       this.cacheList = cacheList
     },
 
     // 清除路由缓存
-    clearCache () {
+    clearCache() {
       this.cacheList = []
     },
 
     // 刷新路由缓存
-    async resetCache (routeItem?: string) {
+    async resetCache(routeItem?: string) {
       const cacheList = cloneDeep(this.cacheList)
       if (routeItem) {
         this.cacheList = cacheList.filter((item: string) => item !== routeItem)

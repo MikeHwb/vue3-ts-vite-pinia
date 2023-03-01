@@ -5,18 +5,18 @@ import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
 // import { getDynamicMenu } from './route'
 
 const routes: RouteRecordRaw[] = [
-//   {
-//     path: '/login',
-//     name: 'login',
-//     component: async () => await import('@/views/Login/index.vue'),
-//     meta: { title: '登录/注册' }
-//   },
-//   {
-//     path: '/',
-//     name: 'home',
-//     component: async () => await import('@/views/Home/index.vue'),
-//     meta: { title: '首页' }
-//   }
+  //   {
+  //     path: '/login',
+  //     name: 'login',
+  //     component: async () => await import('@/views/Login/index.vue'),
+  //     meta: { title: '登录/注册' }
+  //   },
+  //   {
+  //     path: '/',
+  //     name: 'home',
+  //     component: async () => await import('@/views/Home/index.vue'),
+  //     meta: { title: '首页' }
+  //   }
 ]
 
 const router = createRouter({
