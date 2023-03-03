@@ -1,18 +1,54 @@
 module.exports = {
   // type 类型（定义之后，可通过上下键选择）
   types: [
-    { value: '✨feature', name: 'feature:    增加新功能' },
-    { value: '🐛fix', name: 'fix:    修复bug' },
-    { value: '💎style', name: 'style:    样式修改不影响逻辑' },
-    { value: '💄test', name: 'test:    测试用例新增、修改等' },
-    { value: '🚀perf', name: 'perf:     性能优化' },
-    { value: '🌠refactor', name: 'refactor: 功能/代码重构' },
-    { value: '👷ci', name: 'ci:   项目架构相关部署' },
-    { value: '📝docs', name: 'docs:     文档变更' },
-    { value: '🔧chore', name: 'chore:    开发工具变动(构建、脚手架工具等)' },
-    { value: '⏪revert', name: 'revert:   代码回退' },
-    { value: '📦build', name: 'build:    打包' },
-    { value: '✅release', name: 'release:  发布' }
+    {
+      value: ':sparkles: feat',
+      name: '✨ feat:     新功能'
+    },
+    {
+      value: ':bug: fix',
+      name: '🐛 fix:      修复bug'
+    },
+    {
+      value: ':package: build',
+      name: '📦️ build:    打包'
+    },
+    {
+      value: ':zap: perf',
+      name: '⚡️ perf:     性能优化'
+    },
+    {
+      value: ':tada: release',
+      name: '🎉 release:  发布正式版'
+    },
+    {
+      value: ':lipstick: style',
+      name: '💄 style:    代码的样式美化'
+    },
+    {
+      value: ':recycle: refactor',
+      name: '♻️  refactor: 重构'
+    },
+    {
+      value: ':pencil2: docs',
+      name: '✏️  docs:     文档变更'
+    },
+    {
+      value: ':white_check_mark: test',
+      name: '✅ test:     测试'
+    },
+    {
+      value: ':rewind: revert',
+      name: '⏪️ revert:   回退'
+    },
+    {
+      value: ':rocket: chore',
+      name: '🚀 chore:    构建/工程依赖/工具'
+    },
+    {
+      value: ':construction_worker: ci',
+      name: '👷 ci:       CI related changes'
+    }
   ],
 
   // scope 类型（定义之后，可通过上下键选择）
@@ -35,7 +71,7 @@ module.exports = {
   // }),
 
   // 是否允许自定义填写 scope，在 scope 选择的时候，会有 empty 和 custom 可以选择。
-  allowCustomScopes: true,
+  // allowCustomScopes: true,
 
   // allowTicketNumber: false,
   // isTicketNumberRequired: false,
@@ -44,15 +80,15 @@ module.exports = {
 
   // 针对每一个 type 去定义对应的 scopes，例如 fix
   /*
-    scopeOverrides: {
-      fix: [
-        { name: 'merge' },
-        { name: 'style' },
-        { name: 'e2eTest' },
-        { name: 'unitTest' }
-      ]
-    },
-    */
+  scopeOverrides: {
+  fix: [
+    { name: 'merge' },
+    { name: 'style' },
+    { name: 'e2eTest' },
+    { name: 'unitTest' }
+  ]
+  },
+  */
 
   // 交互提示信息
   messages: {
@@ -68,7 +104,7 @@ module.exports = {
   // allowBreakingChanges: ['feat', 'fix'],
 
   // 跳过要询问的步骤
-  skipQuestions: ['body', 'footer'],
+  // skipQuestions: ['body', 'footer'],
 
   // subject 限制长度
   subjectLimit: 72
