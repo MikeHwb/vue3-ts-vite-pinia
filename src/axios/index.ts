@@ -68,7 +68,7 @@ const showLoading = (config: { text: string }) => {
   }
   requestCount++
 }
-const hideLoading = (): void => {
+const hideLoading = (): any => {
   requestCount--
   if (requestCount === 0) {
     loading.close()

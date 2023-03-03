@@ -7,7 +7,7 @@ module.exports = {
   extends: [
     'plugin:vue/vue3-essential',
     'standard-with-typescript',
-    'plugin:prettier/recommended',
+    'plugin:prettier/recommended'
     // './src/presets/eslint/eslintrc-auto-import.json'
   ],
   overrides: [
@@ -42,7 +42,7 @@ module.exports = {
     '@typescript-eslint/no-floating-promises': 'off',
     'array-callback-return': 'off',
     'vue/no-mutating-props': 'off'
-  },
+  }
   // globals: {
   //   ElMessage: true,
   //   ElLoading: true
