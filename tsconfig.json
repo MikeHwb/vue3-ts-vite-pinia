@@ -7,6 +7,7 @@
     "strict": true,
     "jsx": "preserve",
     "resolveJsonModule": true,
+    // 确保每个文件都可以安全传输，而不依赖于其他导入
     "isolatedModules": true,
     "esModuleInterop": true,
     "lib": ["ESNext", "DOM"],
@@ -18,7 +19,7 @@
     },
     "allowJs": true
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "*.ts"],
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "*.ts", "commitlint.config.cjs"],
   "exclude": ["node_modules", "dist"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

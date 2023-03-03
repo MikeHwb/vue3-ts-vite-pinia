@@ -36,6 +36,8 @@
     "vue-router": "4"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
     "@iconify-json/ep": "^1.1.9",
     "@types/node": "^18.14.2",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
