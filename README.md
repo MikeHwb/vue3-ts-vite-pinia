@@ -1,89 +1,96 @@
-<<<<<<< HEAD
-vue3-ts-vite-pinia 是一个 vue3 基础搭建模板，它是基于 vue3,ts 和 vite，项目都是以 composition api 风格编写。
+### 项目依赖版本号
 
-版本：
+```
+"node": "^18.12.0"
+"pnpm": "^7.14.1"
+```
 
-vue3 发布之后，性能增强，速度 vue2 的倍数，打包体积都在减小（treeshaking），composition api 增加了项目可读性。
+### 下载&运行
 
-项目目的：
+```
+git clone http://git.zen-game.com/platform/oa/fmis/frontend/oa_web_v3.git
+cd oa_web_v3
+pnpm install
+pnpm run dev
+```
 
-学习 vue3+ts
-保持 composition api 风格
+### git 提交规范
 
-目录结构
+```
+feature: 新功能、新特性
+fix: 修改 bug
+style: 在不影响功能逻辑的基础上修改样式
+test: 测试用例新增、修改
+perf: 更改代码，以提高性能（在不影响代码内部行为的前提下，对程序性能进行优化）
+refactor: 代码重构（重构，在不影响代码内部行为、功能下的代码修改）
+chore: 开发工具变动(构建、脚手架工具等)
+docs: 文档修改
+ci: 项目架构相关部署
+build: 影响项目构建或依赖项修改
+revert: 恢复上一次提交
+release: 发布新版本
+```
+
+### 项目结构
+
+```
+oa_web_v3
+├─ .husky
+├─ .gitignore
 ├─ .cz-config.cjs
 ├─ .eslintrc.cjs
-├─ .gitignore
-├─ .husky
-│ ├─ \_
-│ │ ├─ .gitignore
-│ │ └─ husky.sh
-│ └─ pre-commit
-├─ .prettierrc
-├─ .vscode
-│ ├─ extensions.json
-│ └─ settings.json
-├─ README.md
-├─ commitlint.config.cjs
-├─ env.d.ts
+├─ .prettierrc   // 自动化配置项目规范(以上所有)
+├─ build        // 打包配置
 ├─ index.html
-├─ package-lock.json
-├─ package.json
 ├─ pnpm-lock.yaml
+├─ package.json  // 依赖文件
 ├─ public
-│ └─ vite.svg
+│  └─ vite.svg
 ├─ src
-│ ├─ App.vue
-│ ├─ assets
-│ │ ├─ css
-│ │ │ └─ global.scss
-│ │ └─ vue.svg
-│ ├─ axios
-│ │ ├─ index.ts
-│ │ ├─ request.ts
-│ │ └─ types.ts
-│ ├─ components
-│ │ └─ HelloWorld.vue
-│ ├─ main.ts
-│ ├─ presets
-│ │ └─ types
-│ │ ├─ auto-imports.d.ts
-│ │ └─ components.d.ts
-│ ├─ routers
-│ │ ├─ index.ts
-│ │ └─ route.ts
-│ ├─ store
-│ │ ├─ index.ts
-│ │ └─ modules
-│ │ ├─ app.ts
-│ │ ├─ menu.ts
-│ │ ├─ tab.ts
-│ │ └─ user.ts
-│ └─ style.css
-├─ tree.txt
+│  ├─ assets  // 静态资源
+│  │  ├─ logo.png
+│  │  ├─ images
+│  │  └─ css
+│  │     ├─ reset.css
+│  │     └─ element-variables.scss
+│  ├─ presets     // 预配置-文件自动生成
+│  │  ├─ eslint
+│  │  │  └─ eslintrc-auto-import.json  // eslint配置文件
+│  │  └─ types
+│  │     ├─ auto-imports.d.ts  // api自动导入声明文件位置
+│  │     └─ components.d.ts    // 组件自动导入声明文件位置
+│  ├─ interfaces // ts类型
+│  │  └─ index.ts
+│  ├─ api
+│  │  └─ login.ts
+│  ├─ axios  // http 方法封装
+│  │  ├─ index.ts
+│  │  └─ request.ts
+│  ├─ routers  // 路由配置
+│  │  ├─ index.ts
+│  │  └─ route.ts
+│  ├─ stores  // 状态管理库配置
+│  │  └─ index.ts
+│  ├─ utils  // 公共方法
+│  │  └─ index.ts
+│  ├─ layouts   // 布局系统
+│  │  └─ notFound.vue
+│  ├─ components  // 公共组件
+│  │  └─ demo.vue
+│  ├─ views   // 业务页面
+│  │  └─ business.vue
+│  ├─ App.vue
+│  ├─ main.ts
+│  └─ env.d.ts
 ├─ tsconfig.json
 ├─ tsconfig.node.json
-└─ vite.config.ts
+└─ vite.config.ts // vite 配置
+```
 
-项目采用技术:
+### 路由配置说明
 
-vue3 + composition api
-typescript3.9
-sass (dart sass)
-vue next 系列:
-
-element-plus
-pinia
-Setup
-
-前后端都启动
-pnpm run dev
-
-提交代码：
-pnpm run git
-
-# "git": "git add . && git cz && git push"
-
-# vue3-ts-vite-pinia
-
-> > > > > > > 97443747ca9854d890616c41a4c49a3df4d9a176
+```
+1. 授权标识perm命名为简单英文,且命名必须唯一
+2. 动态路由：新增、编辑路由页面的组件路径、授权标识、菜单URL等必填，组件路径为views文件夹下面的对应组件路径。
+3. 页面缓存：组件的name必须唯一，且与菜单的授权标识perm一样
+```
