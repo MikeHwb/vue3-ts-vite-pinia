@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 vue3-ts-vite-pinia 是一个 vue3 基础搭建模板，它是基于 vue3,ts 和 vite，项目都是以 composition api 风格编写。
 
 版本：
@@ -81,4 +82,8 @@ pnpm run dev
 提交代码：
 pnpm run git
 
-"git": "git add . && git cz && git push"
+# "git": "git add . && git cz && git push"
+
+# vue3-ts-vite-pinia
+
+> > > > > > > 97443747ca9854d890616c41a4c49a3df4d9a176
