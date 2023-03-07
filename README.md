@@ -8,8 +8,6 @@
 ### 下载&运行
 
 ```
-git clone http://git.zen-game.com/platform/oa/fmis/frontend/oa_web_v3.git
-cd oa_web_v3
 pnpm install
 pnpm run dev
 ```
